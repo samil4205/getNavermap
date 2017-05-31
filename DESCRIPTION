@@ -1,0 +1,33 @@
+Package: getNavermap
+Type: Package
+Title: Load Naver map on Naver API to ggmap
+Version: 0.1.0
+Author: YoungHo Jung <samil4205@naver.com>
+Maintainer: YoungHo Jung <samil4205@naver.com>
+Description: Load Naver map on Naver API to ggmap
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Depends:
+    R (>= 3.1.0),
+    ggplot2 (>= 2.2.0)
+Imports:
+    proto,
+    RgoogleMaps,
+    png,
+    plyr,
+    reshape2,
+    rjson,
+    mapproj,
+    jpeg,
+    geosphere,
+    digest,
+    scales,
+    dplyr,
+    bitops
+Suggests:
+    MASS,
+    stringr,
+    hexbin,
+    tibble
