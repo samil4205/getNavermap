@@ -158,7 +158,9 @@ get_navermap2 <- function(
     ll.lat = ll[2], ll.lon = ll[1],
     ur.lat = ll[4], ur.lon = ll[3]
   )
-
+  
+  out <- t(map)
+  
   # additional map meta-data
   attr(map, "source")  <- "naver"
   attr(map, "maptype") <- "naver"
