@@ -1,6 +1,7 @@
 export(get_navermap2)
 export(getBorderLonLat)
 import(RgoogleMaps)
+import(lazyeval)
 import(bitops)
 import(geosphere)
 import(ggplot2)
