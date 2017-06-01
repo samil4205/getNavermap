@@ -22,7 +22,6 @@ Imports:
     mapproj,
     jpeg,
     geosphere,
-    digest,
     scales,
     dplyr,
     bitops
