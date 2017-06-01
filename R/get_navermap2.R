@@ -3,7 +3,7 @@ get_navermap2 <- function(
   size = c(640,640), format = c("png", "jpeg", "jpg"),
   crs = c("EPSG:4326", "NHN:2048", "NHN:128", "EPSG:4258", "EPSG:4162", "EPSG:2096", "EPSG:2097", "EPSG:2098", "EPSG:900913"),
   baselayer = c("default", "satellite"), color = c("color","bw"),
-  overlayers = c("anno_satellite", "bicycle", "roadview", "traffic"),
+  overlayers = NULL,
   markers, key, uri, filename = NULL, messaging = FALSE, urlonly = FALSE,
   force = FALSE, where = tempdir(), archiving = TRUE, ...
 ){
@@ -100,7 +100,14 @@ get_navermap2 <- function(
   format_url <- paste0("format=",format)
 
   baselayer_url <- paste0("baselayer=", baselayer)
-  overlayers_url <- paste0("overlayers=", paste(overlayers, collapse=","))
+  
+  overlayers_url <- 
+    if(is.null(overlayers)){
+      NULL
+    }else{
+      paste0("overlayers=", paste(overlayers, collapse=","))
+    }
+
   key_url <- paste0("clientId=", key)
   uri_url <- paste0("url=", uri)
   crs_url <- paste0("crs=", crs)
