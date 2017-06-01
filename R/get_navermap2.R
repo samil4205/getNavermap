@@ -48,8 +48,12 @@ get_navermap2 <- function(
 
   # baselayer, overlayers arg checked by match.arg
   baselayer <- match.arg(baselayer)
-  overlayers <- match.arg(overlayers, several.ok=TRUE)
-
+  if(is.null(overlayers)){
+    overlayers <- NULL
+  } else {
+    overlayers <- match.arg(overlayers, several.ok=TRUE)  
+  }
+  
   if("markers" %in% argsgiven){
     markers_stop <- TRUE
     if(is.data.frame(markers) && all(apply(markers[,1:2],2,is.numeric))) markers_stop <- FALSE
