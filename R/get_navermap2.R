@@ -104,7 +104,12 @@ get_navermap2 <- function(
   format_url <- paste0("format=",format)
 
   baselayer_url <- paste0("baselayer=", baselayer)
-  overlayers_url <- paste0("overlayers=", paste(overlayers, collapse=","))
+  overlayers_url <- 
+    if(is.null(overlayers)){
+      NULL
+    }else{
+      paste0("overlayers=", paste(overlayers, collapse=","))
+    }
   key_url <- paste0("clientId=", key)
   uri_url <- paste0("url=", uri)
   crs_url <- paste0("crs=", crs)
