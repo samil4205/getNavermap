@@ -3,8 +3,7 @@ get_navermap2 <- function(
   size = c(640,640), format = c("png", "jpeg", "jpg"),
   crs = c("EPSG:4326", "NHN:2048", "NHN:128", "EPSG:4258", "EPSG:4162", "EPSG:2096", "EPSG:2097", "EPSG:2098", "EPSG:900913"),
   baselayer = c("default", "satellite"), color = c("color","bw"),
-  overlayers,
-  markers, key, uri, filename = NULL, messaging = FALSE, urlonly = FALSE,
+  overlayers, markers, key, uri, filename = NULL, messaging = FALSE, urlonly = FALSE,
   force = FALSE, where = tempdir(), archiving = TRUE, ...
 ){
 
